@@ -25,7 +25,7 @@ mongoose.connection.on("disconnected", () => {
 });
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://hall-of-fame-03-phi.vercel.app/',
   credentials: true
 }));
 

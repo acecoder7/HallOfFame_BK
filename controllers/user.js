@@ -40,7 +40,7 @@ export const register = async (req, res) => {
 export const whoami = async (req, res) => {
   try {
     const cookie = req.headers.cookie;
-    //console.log(cookie);
+    console.log(cookie);
     res.set("Access-Control-Allow-Origin", "https://halloffame-fr.onrender.com");
     res.set("Access-Control-Allow-Credentials", "true");
     //res.setHeader("Access-Control-Allow-Credentials", true);
@@ -117,11 +117,13 @@ export const login = async (req, res) => {
 
     const payload = { ...user._doc };
 
-    //console.log(payload, "payload");
+    console.log(payload, "payload");
 
     const token = await jwt.sign(payload, process.env.JWT_SECRET, {
       expiresIn: "10d",
     });
+    
+    console.log(token, "token");
 
     res.setHeader(
       "Set-Cookie",

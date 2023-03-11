@@ -129,7 +129,7 @@ export const login = async (req, res) => {
       "Set-Cookie",
       cookie.serialize("halloffame", token, {
         httpOnly: true,
-        secure: process.env.NODE_ENV !== "development",
+        secure: true,
         sameSite: "lax",
         maxAge: 10 * 24 * 60 * 60,
         path: "/",

@@ -129,11 +129,11 @@ export const login = async (req, res) => {
       "Set-Cookie",
       cookie.serialize("halloffame", token, {
         httpOnly: true,
-        secure: false,
+        secure: true,
         sameSite: "none",
         maxAge: 10 * 24 * 60 * 60,
         path: "/",
-        domain: ".halloffame-fr.onrender.com"
+        domain: ".onrender.com"
       })
     );
 

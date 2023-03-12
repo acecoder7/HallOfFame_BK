@@ -130,7 +130,7 @@ export const login = async (req, res) => {
       cookie.serialize("halloffame", token, {
         httpOnly: true,
         secure: true,
-        sameSite: "lax",
+        sameSite: "none",
         maxAge: 10 * 24 * 60 * 60,
         path: "/",
         domain: "halloffame-fr.onrender.com"

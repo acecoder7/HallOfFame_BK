@@ -133,7 +133,7 @@ export const login = async (req, res) => {
         sameSite: "none",
         maxAge: 10 * 24 * 60 * 60,
         path: "/",
-        domain: "https://halloffame-fr.onrender.com"
+        domain: ".halloffame-fr.onrender.com"
       })
     );
 
